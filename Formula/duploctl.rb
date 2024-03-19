@@ -2,18 +2,18 @@
 class Duploctl < Formula
   desc "Command-line tools for Duplocloud"
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.11"
+  version "0.2.13"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}/duploctl-#{version}"
 
   on_macos do
     url "#{base_url}-darwin-amd64.tar.gz"
-    sha256 "d6e283b217c5bacf34dcf81ff754cb45659fbe668ea6265708363399d8d31e28"
+    sha256 "e0c9b3ff90c1a4539be7b5ba102d3c65b0d661f1ce48232697d9aee118f79097"
   end
 
   on_linux do
     url "#{base_url}-linux-amd64.tar.gz"
-    sha256 "f254f372bd2717b229884ae4c8e6b9793f693d3b22d39c5c763c4dc57122ae2a"
+    sha256 "37928fadf0964168d1fd8231d7221347026915f2f830263bbb9b87e61394653b"
   end
 
   def install

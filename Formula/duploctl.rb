@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.16"
+  version "0.2.18"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud-client-#{version}.tar.gz"
-    sha256 "ddd79908ee77be41459a44c0c474ad3f5160e9b476f1026be669fd28c0600b7b"
+    sha256 "ee078c0b2a39560a111967901642eeee79b8e737a02f10c91ee941bc0b6e60c8"
     depends_on "python@3.12"
     
     resource "requests" do
@@ -45,18 +45,23 @@ class Duploctl < Formula
       sha256 "57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
     end
   
+    resource "jsonpointer" do
+      url "https://files.pythonhosted.org/packages/8f/5e/67d3ab449818b629a0ffe554bb7eb5c030a71f7af5d80fbf670d7ebe62bc/jsonpointer-2.4.tar.gz"
+      sha256 "585cee82b70211fa9e6043b7bb89db6e1aa49524340dde8ad6b63206ea689d88"
+    end
+  
     def install
       virtualenv_install_with_resources
     end
   else
     on_macos do
       url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-      sha256 "7630cfb0e044774319495734644a154b91cfedde021805e9e713b2b7d5a0406c"
+      sha256 "7c398310740cb57abb6af22c72331ade3ba597daba8211d33efc8f1510d9a4de"
     end
   
     on_linux do
       url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-      sha256 "dcdd6a50cb07b6a59679f4ffd8a55db399242c9dea80411d57849ab3b0cca3d9"
+      sha256 "ce4db059faa81cce26e26915c3ef5eb97198fad27f0fe2114cade2c80cb43ecf"
     end
   
     def install

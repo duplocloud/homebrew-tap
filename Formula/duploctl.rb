@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.21"
+  version "0.2.22"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "None"
+    sha256 "f974babd4d89080abac28b8c0ec6b358c832e39d0b4b526d79a8ac2b7640d73d"
     depends_on "python@3.12"
     
     resource "requests" do
@@ -56,12 +56,12 @@ class Duploctl < Formula
   else
     on_macos do
       url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-      sha256 "620a55192d0ebab17a75b6f07f85d0dc38f6d75a4c1b60967106a2ae58a73b95"
+      sha256 "5123a8a6e55a5baac9630e6e314e01d4089e2f5c34f36f6e7792c2ec3c1cab86"
     end
   
     on_linux do
       url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-      sha256 "a9f413531aafc88972baedcb20443eef99b0a7da28a05ae3b1d644bcb66709da"
+      sha256 "b4c0fba369fdaf331ad040bc701d258fb2f2d1c33967e05eb4f294dae9af3f32"
     end
   
     def install

@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.23"
+  version "0.2.25"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,56 +12,56 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "c4936824cdfcb9e558547a747861d1081b656925b77090a3f4f12310bdb18279"
+    sha256 "8a646502f3e746c710dec901d8e760a3092258c450fc4a95fe27ae6eeb5e91aa"
     depends_on "python@3.12"
     
-    resource "requests" do
-      url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-      sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
-    end
-  
-    resource "cachetools" do
-      url "https://files.pythonhosted.org/packages/b3/4d/27a3e6dd09011649ad5210bdf963765bc8fa81a0827a4fc01bafd2705c5b/cachetools-5.3.3.tar.gz"
-      sha256 "ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105"
-    end
-  
-    resource "jmespath" do
-      url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-      sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
-    end
-  
-    resource "pyyaml" do
-      url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
-      sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
-    end
-  
-    resource "jsonpatch" do
-      url "https://files.pythonhosted.org/packages/42/78/18813351fe5d63acad16aec57f94ec2b70a09e53ca98145589e185423873/jsonpatch-1.33.tar.gz"
-      sha256 "9fcd4009c41e6d12348b4a0ff2563ba56a2923a7dfee731d004e212e1ee5030c"
-    end
-  
-    resource "pyjwt" do
-      url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
-      sha256 "57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
-    end
-  
-    resource "jsonpointer" do
-      url "https://files.pythonhosted.org/packages/8f/5e/67d3ab449818b629a0ffe554bb7eb5c030a71f7af5d80fbf670d7ebe62bc/jsonpointer-2.4.tar.gz"
-      sha256 "585cee82b70211fa9e6043b7bb89db6e1aa49524340dde8ad6b63206ea689d88"
-    end
-  
+      resource "requests" do
+        url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
+        sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+      end
+    
+      resource "cachetools" do
+        url "https://files.pythonhosted.org/packages/b3/4d/27a3e6dd09011649ad5210bdf963765bc8fa81a0827a4fc01bafd2705c5b/cachetools-5.3.3.tar.gz"
+        sha256 "ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105"
+      end
+    
+      resource "jmespath" do
+        url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
+        sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+      end
+    
+      resource "pyyaml" do
+        url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+        sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+      end
+    
+      resource "jsonpatch" do
+        url "https://files.pythonhosted.org/packages/42/78/18813351fe5d63acad16aec57f94ec2b70a09e53ca98145589e185423873/jsonpatch-1.33.tar.gz"
+        sha256 "9fcd4009c41e6d12348b4a0ff2563ba56a2923a7dfee731d004e212e1ee5030c"
+      end
+    
+      resource "pyjwt" do
+        url "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz"
+        sha256 "57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"
+      end
+    
+      resource "jsonpointer" do
+        url "https://files.pythonhosted.org/packages/8f/5e/67d3ab449818b629a0ffe554bb7eb5c030a71f7af5d80fbf670d7ebe62bc/jsonpointer-2.4.tar.gz"
+        sha256 "585cee82b70211fa9e6043b7bb89db6e1aa49524340dde8ad6b63206ea689d88"
+      end
+    
     def install
       virtualenv_install_with_resources
     end
   else
     on_macos do
       url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-      sha256 "4f8a6d672da56fdfa89b53b9efd407df819118a7d5ba33c4ceef14d859276a4d"
+      sha256 "76929ff02ab21954b1099cb74291d7a14e33394170ca064192f0b0b21bd516cd"
     end
   
     on_linux do
       url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-      sha256 "e9583199a65a0bd64183b04ff1b6b972bce2f8a619b4db69959ab9f280e82798"
+      sha256 "2c710d0c8d7e4be9634a82500366571e538c0988af10593d0792a42d04cd3603"
     end
   
     def install

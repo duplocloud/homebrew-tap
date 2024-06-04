@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.27"
+  version "0.2.28"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "505c787554eb78e4a138a9cda862aa87e02b0b5ab9cadc235da706ea33dc8954"
+    sha256 "6ae6a9d6daf75da631cef56cf43c24aaaf7207bc1a9131e348460740c8cb1330"
     depends_on "python@3.12"
     
     resource "cachetools" do
@@ -21,8 +21,8 @@ class Duploctl < Formula
     end
     
     resource "certifi" do
-      url "https://files.pythonhosted.org/packages/71/da/e94e26401b62acd6d91df2b52954aceb7f561743aa5ccc32152886c76c96/certifi-2024.2.2.tar.gz"
-      sha256 "0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f"
+      url "https://files.pythonhosted.org/packages/07/b3/e02f4f397c81077ffc52a538e0aec464016f1860c472ed33bd2a1d220cc5/certifi-2024.6.2.tar.gz"
+      sha256 "3cd43f1c6fa7dedc5899d69d3ad0398fd018ad1a17fba83ddaf78aa46c747516"
     end
     
     resource "charset-normalizer" do
@@ -61,8 +61,8 @@ class Duploctl < Formula
     end
     
     resource "requests" do
-      url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-      sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+      url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+      sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
     end
     
     resource "urllib3" do
@@ -76,12 +76,12 @@ class Duploctl < Formula
   else
     on_macos do
       url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-      sha256 "92ee8c8cecf18510f691f9ea9adfe30cb6e69d47ab242da448d7cd9fe19d16c8"
+      sha256 "886bf646b009bde5b7a7ed65445f237930accb4edd8e3875e4681285d0898999"
     end
   
     on_linux do
       url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-      sha256 "3b478849e950c104a74f9c70518181d7d6827a320dc8a1feefee7912c09daf38"
+      sha256 "728584ea830fddb7c9b2ae352b2f16c3c2fe13f91a257f2e02a19f4d7bd3491f"
     end
   
     def install

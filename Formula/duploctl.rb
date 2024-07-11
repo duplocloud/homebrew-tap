@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.29"
+  version "0.2.30"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "498a25330b2d2e78653aea4bcdd25dfa37e0ef906901c6fa631f24c08f3e60cb"
+    sha256 "044461c52fc9cf5903815ef95b41df2c8962c00b79ffa30e4c78295eabf49f16"
     depends_on "python@3.12"
     
     resource "cachetools" do
@@ -21,8 +21,8 @@ class Duploctl < Formula
     end
     
     resource "certifi" do
-      url "https://files.pythonhosted.org/packages/07/b3/e02f4f397c81077ffc52a538e0aec464016f1860c472ed33bd2a1d220cc5/certifi-2024.6.2.tar.gz"
-      sha256 "3cd43f1c6fa7dedc5899d69d3ad0398fd018ad1a17fba83ddaf78aa46c747516"
+      url "https://files.pythonhosted.org/packages/c2/02/a95f2b11e207f68bc64d7aae9666fed2e2b3f307748d5123dffb72a1bbea/certifi-2024.7.4.tar.gz"
+      sha256 "5a1e7645bc0ec61a09e26c36f6106dd4cf40c6db3a1fb6352b0244e7fb057c7b"
     end
     
     resource "charset-normalizer" do
@@ -46,8 +46,8 @@ class Duploctl < Formula
     end
     
     resource "jsonpointer" do
-      url "https://files.pythonhosted.org/packages/8f/5e/67d3ab449818b629a0ffe554bb7eb5c030a71f7af5d80fbf670d7ebe62bc/jsonpointer-2.4.tar.gz"
-      sha256 "585cee82b70211fa9e6043b7bb89db6e1aa49524340dde8ad6b63206ea689d88"
+      url "https://files.pythonhosted.org/packages/6a/0a/eebeb1fa92507ea94016a2a790b93c2ae41a7e18778f85471dc54475ed25/jsonpointer-3.0.0.tar.gz"
+      sha256 "2b2d729f2091522d61c3b31f82e11870f60b68f43fbc705cb76bf4b832af59ef"
     end
     
     resource "PyJWT" do
@@ -66,8 +66,8 @@ class Duploctl < Formula
     end
     
     resource "urllib3" do
-      url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
-      sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
+      url "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz"
+      sha256 "dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"
     end
     
     def install
@@ -76,12 +76,12 @@ class Duploctl < Formula
   else
     on_macos do
       url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-      sha256 "d5c3e3c3cfe802cf598bf523fec3dc3895a6a7d9da26e3eb9e4ffe5dd02682a9"
+      sha256 "2af27ca800eb1b6d749a00c0b0501921d7b84fe035423ccf3455096a6b5f4f4e"
     end
   
     on_linux do
       url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-      sha256 "df43955b4796b8535db04acd6c5089480d1dc11d2c56e15e22c850fac86e01fc"
+      sha256 "da98426449ca292c1436f83a1c2ba98b75b60ce43d9eaf61fcfafed5e4084b20"
     end
   
     def install

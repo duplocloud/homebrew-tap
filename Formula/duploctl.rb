@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.32"
+  version "0.2.33"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "b4a91fd87e19c0b03fe1a5f69c616a99ccbba917616a9b6960b6f832aa91c1ef"
+    sha256 "771c0c33233fcb7922cda0bb00ab00722ae8ce91fc248396f8e4d4407962967d"
     depends_on "python@3.12"
     
     resource "cachetools" do
@@ -56,8 +56,8 @@ class Duploctl < Formula
     end
     
     resource "PyYAML" do
-      url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
-      sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+      url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
+      sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
     end
     
     resource "requests" do
@@ -77,22 +77,22 @@ class Duploctl < Formula
     on_macos do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-darwin-arm64.tar.gz"
-        sha256 "b13366a270ad08c7a0dd5c94c7a09a4b7cd7a67e129efea43d824eeae938a7a2"
+        sha256 "cbf4d5595e5a53da1ccde371ec7a2daa8cea6d13ab4df6f187681d6d4972d5ee"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-        sha256 "4324ccebca82c150572e26e8310876354898578d9ece664aaf76c6aebbb790e1"
+        sha256 "a0b40259e5891511608930599c91881e47c66e4947abdf7fe6ff0126980a6653"
       end
     end
   
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-linux-arm64.tar.gz"
-        sha256 "94f957d60b06e5410ea10449d1a23f3e9c00a74d955adbeeae9ef5f84f23f50a"
+        sha256 "9d7d886d5dc1f9c6d58f3e385025b753561233ebc1c143ba9a151a8864950457"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-        sha256 "7eb382fd2fc37ce23d379589f350c50a83aea85e739d5bd225de07414f8b5a10"
+        sha256 "833cef16fdf9bde351b430110586efebcf030b720018cc5eacc342817ddbd3d1"
       end
     end
   

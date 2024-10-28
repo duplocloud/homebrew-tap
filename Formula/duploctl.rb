@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.37"
+  version "0.2.38"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "1300596515ef877eadda0b1fdb34b374321ae4c53bf2b67d336033dcd427582d"
+    sha256 "9ace1d893a929ce3b122424f5de472c224493902cb2aaeee6b0e935e4e30489b"
     depends_on "python@3.12"
     
     resource "cachetools" do
@@ -77,22 +77,22 @@ class Duploctl < Formula
     on_macos do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-darwin-arm64.tar.gz"
-        sha256 "095d56e356de3f7052f24e6f11b76c57c5de3cb246bee0fde78c16dc93f11f47"
+        sha256 "38738f7d91061f4740ccdca529ac6b405b0f78b8a599efb4ecca7bc3c5aeb89e"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-        sha256 "272106cbcf2d217ea9cf691eb3ad37943fa9cc0d118339d4311878662997be05"
+        sha256 "e5fe184fc96ed4b2542fb822de0cf7115b76e003e979deb0b5b9a5a216334e0c"
       end
     end
   
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-linux-arm64.tar.gz"
-        sha256 "ca61be9076aca4eacfebdb2520978296241d7be76d1a4e3d812a9efa270c5fc2"
+        sha256 "21580d68450ce9a2ab4258c573a9bee5cdf2d2dff4c642380249dd0e837c9a56"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-        sha256 "ee4901ad0adf3c7b17110b417d8ef5cde92fa0e80ba7dd5275305abdd088f1e1"
+        sha256 "c2df94c93785f76e7cd3541ef037c4db3a9da9d5d86294f4e9d96f494ac77eba"
       end
     end
   

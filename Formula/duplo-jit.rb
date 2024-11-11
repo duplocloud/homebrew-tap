@@ -11,7 +11,7 @@ class DuploJit < Formula
   on_macos do
     on_intel do
       url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.6/duplo-jit_0.5.6_darwin_amd64.zip"
-      sha256 "217184a7d07f80ddad7897a5b7f265262e4564d48975bdac7d3c69e4bb4c5485"
+      sha256 "44ca56de54820129ee1bbe1b6b4ee340bfbbfad520302a8271ea66b776c07487"
 
       def install
         bin.install "duplo-aws-credential-process"
@@ -20,7 +20,7 @@ class DuploJit < Formula
     end
     on_arm do
       url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.6/duplo-jit_0.5.6_darwin_arm64.zip"
-      sha256 "f50ac42ecb1cf56ed6f70abe209bf685a3bb0845a8ec8a244df707fe8a388b6d"
+      sha256 "e1e6e93509c403496583b87d28add3de66b7342001504f5faf322957a96ed8cb"
 
       def install
         bin.install "duplo-aws-credential-process"
@@ -33,7 +33,7 @@ class DuploJit < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.6/duplo-jit_0.5.6_linux_amd64.zip"
-        sha256 "affb50ca41878138d71ac4d4cb3ecd34e2290770740a46119df6e83f4f7cf5e3"
+        sha256 "6962646c03efc3ab1e9c72c26925f29514425c85c542cd0221415b6925fdcb24"
 
         def install
           bin.install "duplo-aws-credential-process"
@@ -44,7 +44,7 @@ class DuploJit < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.6/duplo-jit_0.5.6_linux_arm.zip"
-        sha256 "30f89e6d0df6181eb36d394ff46a35b7434e8c6eaa34f21c23ed5b57ed6d3aae"
+        sha256 "a2939fb103c1a0db9fe839907de887982cbaa43b49ae5da7a9df87c2e5eab78b"
 
         def install
           bin.install "duplo-aws-credential-process"
@@ -55,7 +55,7 @@ class DuploJit < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.6/duplo-jit_0.5.6_linux_arm64.zip"
-        sha256 "10ab54adc84039341ab4eda4de69a07bf22e4c620080f6aea4b4d2b4783ede6c"
+        sha256 "4606e86c195b5d39025bf9bb0748c1664b4dbd1b551c8bb71e96448efa4e47d9"
 
         def install
           bin.install "duplo-aws-credential-process"

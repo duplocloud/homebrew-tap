@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.2.49"
+  version "0.2.50"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,7 +12,7 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "5e8265be7ca98469c7c0358e898643e8a0bb84fd9ffad9f776b76a19e6366f23"
+    sha256 "3e2918ee3c5ee5831adae96956fd8ecdb1b75697d91f1feeff762bc6b8df7515"
     depends_on "python@3.12"
     
     resource "cachetools" do
@@ -21,13 +21,13 @@ class Duploctl < Formula
     end
     
     resource "certifi" do
-      url "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz"
-      sha256 "3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651"
+      url "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz"
+      sha256 "0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6"
     end
     
     resource "charset-normalizer" do
-      url "https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz"
-      sha256 "44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
+      url "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz"
+      sha256 "5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"
     end
     
     resource "idna" do
@@ -77,22 +77,22 @@ class Duploctl < Formula
     on_macos do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-darwin-arm64.tar.gz"
-        sha256 "b13b1405fe010ce94c7c1da2e7e848bd4afdf1be2836d6cd931ab06e75455b59"
+        sha256 "d0e4fcc9184aa66cd7d451980e3c244ee052bd44356d75b9a57c94e131fcb5b8"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-        sha256 "9fe1275a87fb5d066c80e938968fe8c04b3777ee4ca1a4a951fd0d5a1f422857"
+        sha256 "4aeb2055dc132648132318f5b959e607fd76073df188a7fb300f827c5f917a3e"
       end
     end
   
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-linux-arm64.tar.gz"
-        sha256 "9ca57cf39cce1769bb777ae02e6cc92f59f3951fc0d406ca3554bace25cc2084"
+        sha256 "ce310a9cbc45ad3a048f40cbe9dd611e00c08e94ea4b009c68ad2d5c912cc351"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-        sha256 "5e4b43c66309cfb736a01044a7f6dae9b5b53b3fa51f3aeaf3500be847ffb465"
+        sha256 "51a21badd5d5c52018a0cd53d3fadf382b542113b90684c40da8e36c42b8b1b2"
       end
     end
   

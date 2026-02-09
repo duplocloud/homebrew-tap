@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.3.8"
+  version "0.4.0"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,17 +12,17 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "b77a8732fccc8dad141313e7a670c4005655addb937c35e5a6782f6dfb7768d8"
+    sha256 "955c6f75575872c30c6c99cec14e149f0e6611899c3058895574e0be07aa766f"
     depends_on "python@3.13"
     
     resource "cachetools" do
-      url "https://files.pythonhosted.org/packages/cc/7e/b975b5814bd36faf009faebe22c1072a1fa1168db34d285ef0ba071ad78c/cachetools-6.2.1.tar.gz"
-      sha256 "3f391e4bd8f8bf0931169baf7456cc822705f4e2a31f840d218f445b9a854201"
+      url "https://files.pythonhosted.org/packages/98/af/df70e9b65bc77a1cbe0768c0aa4617147f30f8306ded98c1744bcdc0ae1e/cachetools-7.0.0.tar.gz"
+      sha256 "a9abf18ff3b86c7d05b27ead412e235e16ae045925e531fae38d5fada5ed5b08"
     end
     
     resource "certifi" do
-      url "https://files.pythonhosted.org/packages/4c/5b/b6ce21586237c77ce67d01dc5507039d444b630dd76611bbca2d8e5dcd91/certifi-2025.10.5.tar.gz"
-      sha256 "47c09d31ccf2acf0be3f701ea53595ee7e0b8fa08801c6624be771df09ae7b43"
+      url "https://files.pythonhosted.org/packages/e0/2d/a891ca51311197f6ad14a7ef42e2399f36cf2f9bd44752b3dc4eab60fdc5/certifi-2026.1.4.tar.gz"
+      sha256 "ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120"
     end
     
     resource "charset-normalizer" do
@@ -36,8 +36,8 @@ class Duploctl < Formula
     end
     
     resource "jmespath" do
-      url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
-      sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+      url "https://files.pythonhosted.org/packages/d3/59/322338183ecda247fb5d1763a6cbe46eff7222eaeebafd9fa65d4bf5cb11/jmespath-1.1.0.tar.gz"
+      sha256 "472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d"
     end
     
     resource "jsonpatch" do
@@ -51,8 +51,8 @@ class Duploctl < Formula
     end
     
     resource "PyJWT" do
-      url "https://files.pythonhosted.org/packages/e7/46/bd74733ff231675599650d3e47f361794b22ef3e3770998dda30d3b63726/pyjwt-2.10.1.tar.gz"
-      sha256 "3cc5772eb20009233caf06e9d8a0577824723b44e6648ee0a2aedb6cf9381953"
+      url "https://files.pythonhosted.org/packages/5c/5a/b46fa56bf322901eee5b0454a34343cdbdae202cd421775a8ee4e42fd519/pyjwt-2.11.0.tar.gz"
+      sha256 "35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623"
     end
     
     resource "PyYAML" do
@@ -66,8 +66,8 @@ class Duploctl < Formula
     end
     
     resource "urllib3" do
-      url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
-      sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
+      url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
+      sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
     end
     
     def install
@@ -77,22 +77,22 @@ class Duploctl < Formula
     on_macos do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-darwin-arm64.tar.gz"
-        sha256 "c0bb2f9d78bfbd4bc7a8284623c359f130f074e11fe77506cab65673ded00578"
+        sha256 "0c9f0d0fbafc5dda824604b13096a86d10dbb9251c969652acf0e82ffa0fa0c3"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-        sha256 "6bbf4d275ccf3dd996210d0c82c387ad32ce3f7f1fd876bf32541e64398c5eb8"
+        sha256 "219717fcf579dd898683e2ed24cde86f7f3cc10b353d61c589b44e0bf2126533"
       end
     end
   
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-linux-arm64.tar.gz"
-        sha256 "9343dcaa6cf9c892df4583b1b6c2cc70ebcd0032aed4119cab9370615b44f94f"
+        sha256 "42f5b21471097140cd287852543a5cdba541d983a429ae7d920d9d39c63cbf5f"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-        sha256 "3ddf576e9123dcc41b14e737a4ae05f1283e2bb49beae40ebf1e1e63d0d55afe"
+        sha256 "f26c5cc1d546ebd92426e1b39d0817208f8403134c74acf78c0aca11d7ceb5d7"
       end
     end
   

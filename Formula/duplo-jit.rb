@@ -5,24 +5,24 @@
 class DuploJit < Formula
   desc "Command-line tools for JIT Duplo, AWS and Kubernetes access"
   homepage "https://github.com/duplocloud/duplo-jit"
-  version "0.5.11"
+  version "0.5.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.11/duplo-jit_0.5.11_darwin_amd64.zip"
-      sha256 "61f730be6e7ae18177d4eb9b517cbf09d7184c350e3e9d78c9c7a957062d1424"
+      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.12/duplo-jit_0.5.12_darwin_amd64.zip"
+      sha256 "41077f3d97eafde22bdb7a43fadc3b2de7afefc10cd836ec84cd936dae064af6"
 
-      def install
+      define_method(:install) do
         bin.install "duplo-aws-credential-process"
         bin.install "duplo-jit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.11/duplo-jit_0.5.11_darwin_arm64.zip"
-      sha256 "479ff254bf68c99047e91ff0025d2b74a3e402487d45d7aefd872b75618ecde7"
+      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.12/duplo-jit_0.5.12_darwin_arm64.zip"
+      sha256 "8c7c0c31282f69fc8a5d64cd2799671fc07f64b4a00d8bb5cf98e4410fd28e18"
 
-      def install
+      define_method(:install) do
         bin.install "duplo-aws-credential-process"
         bin.install "duplo-jit"
       end
@@ -31,25 +31,25 @@ class DuploJit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.11/duplo-jit_0.5.11_linux_amd64.zip"
-      sha256 "f70e35eddfdc91a0cb1379183f3a0ac0fa4a141589608dd4cee0af01b6b3cb71"
-      def install
+      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.12/duplo-jit_0.5.12_linux_amd64.zip"
+      sha256 "37762436210f5d091ad102e8b475e2deeffc570337b77fb1c10c960b4a946002"
+      define_method(:install) do
         bin.install "duplo-aws-credential-process"
         bin.install "duplo-jit"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.11/duplo-jit_0.5.11_linux_arm.zip"
-      sha256 "54354ad566111c6df974c2733707b7893b66ce8543ac952311d96faef7076b88"
-      def install
+      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.12/duplo-jit_0.5.12_linux_arm.zip"
+      sha256 "57345cc8355b84f62d89d0d2dc8c1bb2ae336612b1e5b752db339cc589b2fdbf"
+      define_method(:install) do
         bin.install "duplo-aws-credential-process"
         bin.install "duplo-jit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.11/duplo-jit_0.5.11_linux_arm64.zip"
-      sha256 "97558be18ed27eafb2d25e28aec8eda534a136bc4805ff05690b771c9e335af7"
-      def install
+      url "https://github.com/duplocloud/duplo-jit/releases/download/v0.5.12/duplo-jit_0.5.12_linux_arm64.zip"
+      sha256 "43f5546441a53550a44a7f6f6aa55a872108649a8386a76d54969e7e637e107f"
+      define_method(:install) do
         bin.install "duplo-aws-credential-process"
         bin.install "duplo-jit"
       end

@@ -3,7 +3,7 @@ class Duploctl < Formula
 
   desc "Command line Client for interacting with Duplocloud portals."
   homepage "https://github.com/duplocloud/duploctl"
-  version "0.4.2"
+  version "0.4.3"
   license "MIT"
   base_url = "#{homepage}/releases/download/v#{version}"
 
@@ -12,13 +12,8 @@ class Duploctl < Formula
   if build.with? "pip"
     include Language::Python::Virtualenv
     url "#{base_url}/duplocloud_client-#{version}.tar.gz"
-    sha256 "5bc0d816f2a40ef669026a5d7d6dbf49e9ec3b03113bb3b46abb0876c0ff2d3a"
+    sha256 "c6d2685e173e7e12c548bc851cfc94a9d9c640111ae6899527d11ec4a4708842"
     depends_on "python@3.13"
-    
-    resource "annotated-types" do
-      url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
-      sha256 "aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"
-    end
     
     resource "cachetools" do
       url "https://files.pythonhosted.org/packages/af/dd/57fe3fdb6e65b25a5987fd2cdc7e22db0aef508b91634d2e57d22928d41b/cachetools-7.0.5.tar.gz"
@@ -31,13 +26,8 @@ class Duploctl < Formula
     end
     
     resource "charset-normalizer" do
-      url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
-      sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
-    end
-    
-    resource "duplocloud_sdk" do
-      url "https://files.pythonhosted.org/packages/e9/17/a8c4887e1921ae28075bdceeb8405802215822007e9789fc8e9825fef7c4/duplocloud_sdk-0.0.2.tar.gz"
-      sha256 "af312f9dfb274abe0579f18513eab7aeffac323b77d78079bd4fa780b5799818"
+      url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+      sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
     end
     
     resource "idna" do
@@ -60,24 +50,9 @@ class Duploctl < Formula
       sha256 "2b2d729f2091522d61c3b31f82e11870f60b68f43fbc705cb76bf4b832af59ef"
     end
     
-    resource "pydantic" do
-      url "https://files.pythonhosted.org/packages/69/44/36f1a6e523abc58ae5f928898e4aca2e0ea509b5aa6f6f392a5d882be928/pydantic-2.12.5.tar.gz"
-      sha256 "4d351024c75c0f085a9febbb665ce8c0c6ec5d30e903bdb6394b7ede26aebb49"
-    end
-    
-    resource "pydantic_core" do
-      url "https://files.pythonhosted.org/packages/71/70/23b021c950c2addd24ec408e9ab05d59b035b39d97cdc1130e1bce647bb6/pydantic_core-2.41.5.tar.gz"
-      sha256 "08daa51ea16ad373ffd5e7606252cc32f07bc72b28284b6bc9c6df804816476e"
-    end
-    
     resource "PyJWT" do
-      url "https://files.pythonhosted.org/packages/5c/5a/b46fa56bf322901eee5b0454a34343cdbdae202cd421775a8ee4e42fd519/pyjwt-2.11.0.tar.gz"
-      sha256 "35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623"
-    end
-    
-    resource "python-dateutil" do
-      url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
-      sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+      url "https://files.pythonhosted.org/packages/c2/27/a3b6e5bf6ff856d2509292e95c8f57f0df7017cf5394921fc4e4ef40308a/pyjwt-2.12.1.tar.gz"
+      sha256 "c74a7a2adf861c04d002db713dd85f84beb242228e671280bf709d765b03672b"
     end
     
     resource "PyYAML" do
@@ -88,21 +63,6 @@ class Duploctl < Formula
     resource "requests" do
       url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
       sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
-    end
-    
-    resource "six" do
-      url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
-      sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
-    end
-    
-    resource "typing-inspection" do
-      url "https://files.pythonhosted.org/packages/55/e3/70399cb7dd41c10ac53367ae42139cf4b1ca5f36bb3dc6c9d33acdb43655/typing_inspection-0.4.2.tar.gz"
-      sha256 "ba561c48a67c5958007083d386c3295464928b01faa735ab8547c5692e87f464"
-    end
-    
-    resource "typing_extensions" do
-      url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
-      sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
     end
     
     resource "urllib3" do
@@ -117,22 +77,22 @@ class Duploctl < Formula
     on_macos do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-darwin-arm64.tar.gz"
-        sha256 "0b85ac488967d5e9983491c7d8e2b39f1f79e5943241a7005c9aaee6d7951926"
+        sha256 "708e56053bf6bb3280a4c07719de2a3db87f4999a022eba6b0c7265714571c7d"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-darwin-amd64.tar.gz"
-        sha256 "35380986fceeb458d7f3acf7ebda3f73cf22eaa899670cb3a9c420bfd7114f86"
+        sha256 "7262db5c5c6a2cf1d9e10b0e89891f7d4676e5b1ad1d9101fddb8712759224f4"
       end
     end
   
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
         url "#{base_url}/duploctl-#{version}-linux-arm64.tar.gz"
-        sha256 "a36d62a24a949d7a7c8426999e156e6e2c16e05f8b4276a138628bd742f167dc"
+        sha256 "0bc0e29625bdd0338e5be3cdf069e28f2e7bffa9d70be8ff5dd57158d8aed2f2"
       end
       if Hardware::CPU.intel?
         url "#{base_url}/duploctl-#{version}-linux-amd64.tar.gz"
-        sha256 "e151fe7018fd2b48412745d58b2915cd6b54184801d6cb0b1940f70b03c96799"
+        sha256 "7f1a7eda54aa7f29fe71804cba2d4d64f94c3178c15669beb3c8722b95786f24"
       end
     end
   
